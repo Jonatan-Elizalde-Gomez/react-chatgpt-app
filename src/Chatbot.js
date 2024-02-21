@@ -18,6 +18,10 @@ const Chatbot = () => {
                 {
                     model: "gpt-3.5-turbo-0125",
                     prompt: userMessage,
+                    "instructions": "Eres un asistente el cual dará infromación acerca del documento REGLAMENTO-REGIMEN-ACADEMICO-INTERNO, unicamente puedes proporcionar informacion del reglamento, si esa pregunta se sale de los conocimientos obtenidos por este reglamento di que esa información te ha sido proporcionada y se contacte con administracion academica",
+                    "file_ids": [
+                        "file-QIhOXi82h8iu7wuYpbnRnZVs"
+                    ],
                     temperature: 0.7,
                     max_tokens: 150,
                 }

@@ -14,20 +14,14 @@ const Chatbot = () => {
 
         try {
             const response = await axios.post(
-                "https://api.openai.com/v1/completions",
+                "http://localhost:5000/api/completions",
                 {
-                    model: "text-davinci-003", // Cambia esto por tu modelo GPT personalizado
+                    model: "text-davinci-003",
                     prompt: userMessage,
                     temperature: 0.7,
                     max_tokens: 150,
-                },
-                {
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
-                    },
                 }
-            );
+            );            
 
             setMessages([...newMessages, { author: "bot", text: response.data.choices[0].text.trim() }]);
         } catch (error) {

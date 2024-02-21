@@ -16,7 +16,7 @@ const Chatbot = () => {
             const response = await axios.post(
                 "http://localhost:5000/api/completions",
                 {
-                    model: "text-davinci-003",
+                    model: "gpt-3.5-turbo-0125",
                     prompt: userMessage,
                     temperature: 0.7,
                     max_tokens: 150,
